@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>Área do cliente — NydzaTech Solutions</title>
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/portal.css" />
+  </head>
+  <body class="portal-body">
+    <a class="skip-link" href="#login">Pular para o login</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="../index.html" aria-label="NydzaTech Solutions — início">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40" width="36" height="36">
+              <rect width="40" height="40" rx="10" fill="currentColor" />
+              <path d="M11 28V12h5.2l7.4 10.6V12H29v16h-5.2L16.4 17.4V28H11z" fill="#071018" />
+            </svg>
+          </span>
+          <span class="brand-text">
+            <strong>NydzaTech</strong>
+            <small>Área do cliente</small>
+          </span>
+        </a>
+        <a class="btn btn-ghost" href="../index.html">Voltar ao site</a>
+      </div>
+    </header>
+
+    <main class="login-main" id="login">
+      <section class="login-card">
+        <p class="eyebrow">Acesso restrito</p>
+        <h1>Entre para ver planos, contratos e faturas.</h1>
+        <p class="lead">Use o e-mail cadastrado na contratação dos serviços NydzaTech.</p>
+
+        <form id="form-login" novalidate>
+          <label>
+            E-mail
+            <input type="email" name="email" autocomplete="username" required />
+          </label>
+          <label>
+            Senha
+            <input type="password" name="senha" autocomplete="current-password" required />
+          </label>
+          <button class="btn btn-primary" type="submit">Entrar</button>
+          <p class="form-note" id="login-status" role="alert"></p>
+        </form>
+
+        <aside class="demo-box">
+          <p><strong>Demonstração</strong> — ainda sem cadastro real de clientes.</p>
+          <p>E-mail: <code>cliente@nydzatech.me</code></p>
+          <p>Senha: <code>Nydza2026</code></p>
+        </aside>
+
+        <p class="login-help">
+          Precisa de acesso?
+          <a href="https://wa.me/5541988059554?text=Olá,%20preciso%20de%20acesso%20à%20área%20do%20cliente." target="_blank" rel="noopener noreferrer">Fale no WhatsApp</a>
+        </p>
+      </section>
+    </main>
+
+    <script src="../js/portal.js"></script>
+  </body>
+</html>

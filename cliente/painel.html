@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>Painel do cliente — NydzaTech Solutions</title>
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/portal.css" />
+  </head>
+  <body class="portal-body">
+    <a class="skip-link" href="#painel">Pular para o painel</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="../index.html" aria-label="NydzaTech Solutions — início">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40" width="36" height="36">
+              <rect width="40" height="40" rx="10" fill="currentColor" />
+              <path d="M11 28V12h5.2l7.4 10.6V12H29v16h-5.2L16.4 17.4V28H11z" fill="#071018" />
+            </svg>
+          </span>
+          <span class="brand-text">
+            <strong>NydzaTech</strong>
+            <small>Área do cliente</small>
+          </span>
+        </a>
+        <nav class="portal-nav">
+          <span id="user-chip"></span>
+          <button class="btn btn-ghost" type="button" id="btn-sair">Sair</button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="section" id="painel">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Painel</p>
+          <h1 id="saudacao">Olá</h1>
+          <p id="empresa-linha"></p>
+        </header>
+
+        <section class="summary-grid" aria-label="Resumo da conta">
+          <article class="summary-card">
+            <span>Planos ativos</span>
+            <strong id="resumo-planos">—</strong>
+          </article>
+          <article class="summary-card">
+            <span>Contratos vigentes</span>
+            <strong id="resumo-contratos">—</strong>
+          </article>
+          <article class="summary-card">
+            <span>Próximo vencimento</span>
+            <strong id="resumo-vencimento">—</strong>
+          </article>
+        </section>
+
+        <div class="tabs" role="tablist" aria-label="Seções da conta">
+          <button type="button" class="tab is-active" role="tab" aria-selected="true" data-tab="planos">Planos</button>
+          <button type="button" class="tab" role="tab" aria-selected="false" data-tab="contratos">Contratos</button>
+          <button type="button" class="tab" role="tab" aria-selected="false" data-tab="faturamento">Faturamento</button>
+        </div>
+
+        <section class="tab-panel is-active" id="painel-planos" role="tabpanel">
+          <div class="stack" id="lista-planos"></div>
+        </section>
+
+        <section class="tab-panel" id="painel-contratos" role="tabpanel" hidden>
+          <div class="stack" id="lista-contratos"></div>
+        </section>
+
+        <section class="tab-panel" id="painel-faturamento" role="tabpanel" hidden>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Fatura</th>
+                  <th>Competência</th>
+                  <th>Vencimento</th>
+                  <th>Valor</th>
+                  <th>Status</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="lista-faturas"></tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <div class="drawer" id="drawer" hidden>
+      <div class="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+        <button class="drawer-close" type="button" id="drawer-close" aria-label="Fechar">×</button>
+        <div id="drawer-body"></div>
+      </div>
+    </div>
+
+    <script src="../js/portal.js"></script>
+  </body>
+</html>
